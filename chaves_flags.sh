@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
 # listaUsuarios.sh - descrição simples: Extrai usuários do /etc/passwd
-# Site:       https://4fasters.com.br
-# Autor:      Mateus Müller
-# Manutenção: Mateus Müller
+# Site:       
+# Autor:
+# Manutenção:
 #
 # ------------------------------------------------------------------------ #
 # Irá extrai usuários do /etc/passwd, havendo a possibilidade de colocar em

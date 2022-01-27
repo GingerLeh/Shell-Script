@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 #
 # extrai_titulos.sh- descrição simples: Extrai os titulos de um site
-# Site:       https://4fasters.com.br
-# Autor:      Mateus Müller
-# Manutenção: Mateus Müller
+# Site:
+# Autor:
+# Manutenção: 
 #
 # ------------------------------------------------------------------------ #
 #

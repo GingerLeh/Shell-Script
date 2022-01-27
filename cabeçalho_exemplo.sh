@@ -1,40 +1,41 @@
 #!/usr/bin/env bash
 #
-# listaUsuarios.sh - descrição simples: Extrai usuários do /etc/passwd
+# nome do programa: cotarBitcoin.sh - descrição simples: Verifica a última cotação do Bitcoin
+#
 # Site:
-# Autor:
-# Manutenção: 
+# Autor: Pessoa
+# Manutenção: Pessoa
 #
 # ------------------------------------------------------------------------ #
-# Irá extrai usuários do /etc/passwd, havendo a possibilidade de colocar em
-# maísculo e em ordem alfabética
+# Aqui você deve utilizar uma descrição mais detalhada sobre seu programa,
+# explicando a forma de utilizar.
+#
+#   Este programa irá cotar o último valor do Bitcoin com base na API xxxx
 #
 #  Exemplos:
-#      $ ./listaUsuarios -s -m
-#      Neste exemplo ficará em maiúsculo e em ordem alfabética
+#      $ ./cotarBitcoin.sh -d 1
+#      Neste exemplo o script será executado no modo debug nível 1.
 # ------------------------------------------------------------------------ #
 # Histórico:
 #
-#   v1.0 24.01.2022, Alessa:
-#       - Adicionado -s, -h & -v.
-#   v1.1 24.01.2022, Alessa:
-#       - Adicionado o case no lugar do if.
+#   v1.0 03/10/2018, Pessoa:
+#       - Início do programa
+#       - Conta com a funcionalidade X
+#   v1.1 10/10/2018, Pessoa:
+#       - Alterado parametro XXXXX
 # ------------------------------------------------------------------------ #
 # Testado em:
-#   bash 5.0.17
+#   bash --version -> pega a versão no terminal
+#   bash 4.4.19
 # ------------------------------------------------------------------------ #
+# Agradecimentos:
 #
+# 	Joãozinho - Encontrou um bug na parte de login.
+#	  Mariazinha - Enviou uma sugestão de adicionar o -h.
+# ------------------------------------------------------------------------ #
+
 # ------------------------------- VARIÁVEIS ----------------------------------------- #
-USUARIOS="$(cat /etc/passwd | cut -d : -f 1)"
-MENSAGEM_USO="
- $(basename $0) - [OPÇÕES]
 
-
-   -h - Menu de ajuda
-   -v - Versão
-   -s - Ordernar a saída
- "
- VERSAO="v1.1"
 # ------------------------------------------------------------------------ #
 
 # ------------------------------- TESTES ----------------------------------------- #
@@ -46,12 +47,5 @@ MENSAGEM_USO="
 # ------------------------------------------------------------------------ #
 
 # ------------------------------- EXECUÇÃO ----------------------------------------- #
-
-case "$1" in
-  -h) echo "$MENSAGEM_USO" && exit 0   ;;
-  -v) echo "$VERSAO" && exit 0         ;;
-  -s) echo "$USUARIOS" | sort && exit 0;;
-   *) echo "$USUARIOS"                 ;;
-esac
 
 # ------------------------------------------------------------------------ #
