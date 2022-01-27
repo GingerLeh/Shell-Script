@@ -26,9 +26,10 @@
 
 # ------------------------------- VARIÁVEIS ----------------------------------------- #
 ARQUIVO_BANCO_DE_DADOS="banco_de_dados.txt"
-
+SEP=: #usada para alterar o separador no banco de dados, adaptação
 VERDE="\033[32;1m"
 VERMELHO="\033[31;1m"
+TEMP=temp.$$ #cria um temp do programa
 # ------------------------------------------------------------------------ #
 
 # ------------------------------- TESTES ----------------------------------------- #
@@ -38,16 +39,57 @@ VERMELHO="\033[31;1m"
 # ------------------------------------------------------------------------ #
 
 # ------------------------------- FUNÇÕES ----------------------------------------- #
-ListaUsuarios(){
+MostraUsuarioNaTela(){
+  local id="$(echo $linha | cut -d $SEP -f 1)"
+  local nome="$(echo $linha | cut -d $SEP -f 1)"
+  local email="$(echo $linha | cut -d $SEP -f 1)"
+
+  echo -e "${VERDE}ID: ${VERMELHO}$id"
+  echo -e "${VERDE}NOME: ${VERMELHO}$nome"
+  echo -e "${VERDE}EMAIL: ${VERMELHO}$email"
+}
+
+ListaUsuarios (){
   while read -r linha
   do
     [ "$(echo $linha | cut -c1)" = "#" ] && continue
     [ ! "$linha" ] && continue
 
-    local id=
+      MostraUsuarioNaTela "$linha"
 
   done < "$ARQUIVO_BANCO_DE_DADOS"
 
+}
+ValidaExistenciaUsuario (){
+  #-i é para maiusculas e minusculas e o -q é para quiet. Se retornar 1 é pq o usuario nao existe
+  grep -i -q "$1$SEP" "$ARQUIVO_BANCO_DE_DADOS"
+}
+
+InsereUsuario (){
+  local nome="$(echo $1 | cut -d $SEP -f 2)"
+  if ValidaExistenciaUsuario "$nome"
+  then
+    echo "ERRO. Usuario já existe"
+  else
+    echo "$*" >> "$ARQUIVO_BANCO_DE_DADOS" #vai ser colocado o novo usuario no final do arquivo
+    echo "Usuário cadastrado com sucesso!"
+  fi
+  OrdenaLista
+}
+
+Apagausuario (){
+  ValidaExistenciaUsuario "$1" || echo "Usuário não existe" || return #retorna falso.
+
+  grep -i -v "$1$SEP" "$ARQUIVO_BANCO_DE_DADOS" > "$TEMP" #traz tudo do banco menos o usuario desejado
+  mv "$TEMP" "$ARQUIVO_BANCO_DE_DADOS" #move de volta para o arquivo original
+
+  echo "Usuário removido com sucesso!"
+  OrdenaLista
+}
+
+OrdenaLista (){
+  sort "$ARQUIVO_BANCO_DE_DADOS" > "$TEMP"
+  mv "$TEMP" "$ARQUIVO_BANCO_DE_DADOS"
 }
 # ------------------------------------------------------------------------ #
 
