@@ -1,0 +1,30 @@
+Apache Kafka 3.1 opens up data streaming for analytics
+Juno Computers Launch Ubuntu-Powered Mars 15 Laptop with Up to AMD Ryzen 9, NVIDIA RTX 3070
+A Polkit Vulnerability Gives Root on All Major Linux Distros
+How to Install Brave Browser on elementary OS 6.0/6.1
+The Freezing of tasks in the Linux kernel and how it's used by Ksplice
+12-Year-Old PolicyKit Local Privilege Escalation Flaw Now Patched in Major Linux Distros
+Quarkus and Mutiny
+How to Install LAMP Stack on Rocky Linux 8.3/8.4
+How are open source and cloud computing compatible?
+Best Free and Open Source Alternatives to SAS JMP
+Linux Kernel 5.17 RC1 Unveils New Features and Hardware Support
+How to Fix Error 404 Not Found on WordPress
+Major Linux PolicyKit security vulnerability uncovered: Pwnkit
+How to Install Latest 510 NVIDIA Drivers on Debian 11 Bullseye
+Talking digital with Brian Kernighan
+8 ways to speed up your Ansible playbooks
+Gamebuntu 1.0 Launches with a Complete Redesign to Let You Install Only What You Need
+antiX Linux 19.5 Release Brings Latest IceWM Desktop Environment
+EFF Asks Appeals Court to Find DMCA Provisions Unconstitutional
+OpenShell has been working on a classic replacement for Windows 11's Start menu
+Learn about Virtual memory statistics using vmstat
+A bug lurking for 12 years gives attackers root on every major Linux distro
+Jrnl: Your Digital Diary in the Linux Terminal
+Linux vulnerability can be ‘easily exploited’ for local privilege escalation, researchers say
+How to Use XBPS Package Manager on Void Linux
+Phosh 0.15.0 Wayland Shell for GNOME on Mobile Devices Adds Full VPN Support, Swipeable Notification Frames
+5 Arch Linux Distros That Are Easier to Install and Use
+Covid Concerns Push Scale 19x to July and to a New Venue
+Scripting a temperature notifier
+Vulkan 1.3 Released with Dynamic Rendering, Improved Synchronization API
